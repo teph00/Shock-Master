@@ -5,8 +5,6 @@ const createWindow = () => {
     width: 1240,
     height: 720,
     webPreferences: {
-      contextIsolation: true,
-      enableRemoteModule: true,
       // preload: path.join(__dirname, "preload.js"), // TODO: Add preload.js
     },
   });
