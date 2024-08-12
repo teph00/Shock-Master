@@ -1,54 +1,85 @@
 /*** Title Screen Animations ***/
-.slide-up-fade {
+.title-in {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-name: fadeIn, mainSlideUp;
+  animation-name: titleSpawn;
 }
-.delay {
+
+.subtitle-in {
   animation-delay: 0.5s;
-}
-#app-subtitle.slide-up-fade {
-  animation-name: fadeIn, subSlideUp;
-  translate: 0 75vh;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: titleSpawn;
   opacity: 0;
 }
-.fade-mid-top {
+
+.subtitle-out {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-name: slideUpTop;
+  animation-name: subSlideUp;
+  opacity: 1;
 }
-#app-subtitle.fade-out {
-  animation-name: fadeOut, slideUpTop;
+
+.title-up {
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: titleDriftUp;
 }
+
+.fade-in-bottom {
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn, slideFromBottom;
+}
+
+.fade-in,
+.fade-out {
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+}
+
 /* Animations */
-@keyframes mainSlideUp {
+@keyframes titleSpawn {
   from {
-    translate: 0 70vh;
+    translate: 5vw 70vh;
+    opacity: 0;
   }
   to {
-    translate: 0 45vh;
+    translate: 5vw 45vh;
+    opacity: 1;
+  }
+}
+@keyframes titleDriftUp {
+  from {
+    translate: 5vw 45vh;
+    font-size: 3rem;
+  }
+  to {
+    translate: 0 0;
+    font-size: 2rem;
   }
 }
 @keyframes subSlideUp {
   from {
-    translate: 0 75vh;
-  }
-  to {
-    translate: 0 45vh;
-  }
-}
-
-@keyframes slideUpTop {
-  from {
-    translate: 0 45vh;
+    translate: 5vw 45vh;
+    opacity: 1;
   }
   to {
     translate: 0 0;
+    opacity: 0;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -57,12 +88,44 @@
     opacity: 1;
   }
 }
-
 @keyframes fadeOut {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes growProfileForm {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 300px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
   }
 }

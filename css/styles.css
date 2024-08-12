@@ -1,4 +1,112 @@
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
+html,
+body,
+.main {
+  height: 100%;
+}
+
+header {
+  padding: 5px 10px 10px;
+}
+
+#app-title {
+  margin-bottom: 0;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 10px 10px 0;
+  border-right: 1px solid var(--bulma-border);
+}
+
+.main {
+  display: block;
+  padding-left: 200px;
+  position: relative;
+  border-top: 1px solid var(--bulma-border);
+}
+
+.main > .main-content {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.popover {
+  z-index: 1200;
+}
+
+.radios .radio {
+  display: block;
+}
+.radios .radio + .radio {
+  margin-left: 0;
+  margin-top: 0.5em;
+}
+
+/*** User Profile Form ***/
+.floating-form {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: none;
+}
+
+/*** Shock image styles ***/
+.partner-container {
+  position: relative;
+}
+
+.partner-image {
+  height: 300px;
+}
+
+.shock-1,
+.shock-2,
+.shock-3,
+.shock-4,
+.shock-5,
+.shock-6 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+}
+
+.shock-1 {
+  top: 78px;
+  left: 10px;
+}
+.shock-2 {
+  top: 78px;
+  left: 86px;
+}
+.shock-3 {
+  top: 113px;
+  left: 64px;
+}
+.shock-4 {
+  top: 138px;
+  left: 48px;
+}
+.shock-5 {
+  top: 169px;
+  left: 32px;
+}
+.shock-6 {
+  top: 169px;
+  left: 64px;
+}
+
+.stat-block {
+  position: absolute;
+  left: -82px;
+  top: 4px;
 }
