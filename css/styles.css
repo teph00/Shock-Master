@@ -78,6 +78,18 @@ header {
   position: absolute;
   height: 20px;
   width: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 1px;
+}
+.shock-1:hover,
+.shock-2:hover,
+.shock-3:hover,
+.shock-4:hover,
+.shock-5:hover,
+.shock-6:hover {
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
 .shock-1 {
